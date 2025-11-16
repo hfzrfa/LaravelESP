@@ -51,7 +51,7 @@ Pseudocode for sending readings every 10 s:
 const char* WIFI_SSID = "your-ssid";
 const char* WIFI_PASS = "your-pass";
 const char* API_URL = "http://your-server/api/dht";
-const char* API_SECRET = "10042006"; // match .env ESP32_SECRET
+const char* API_SECRET = "your-scret"; // match .env ESP32_SECRET
 
 DHT dht(4, DHT22); // GPIO 4
 
@@ -126,7 +126,7 @@ When rotating `ESP32_SECRET`, update both `.env` and the firmware constant.
 	"device_id": "esp32-lab-01",
 	"temperature": 24.7,
 	"humidity": 61.3,
-	"secret": "10042006"
+	"secret": "your-scret"
 }
 ```
 
@@ -144,7 +144,7 @@ curl -X POST http://localhost:8000/api/dht \
 				"device_id": "workbench-esp32",
 				"temperature": 25.4,
 				"humidity": 58.1,
-				"secret": "10042006"
+				"secret": "your-scret"
 			}'
 ```
 
